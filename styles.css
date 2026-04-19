@@ -270,19 +270,12 @@ img { max-width: 100%; }
     box-shadow: 0 8px 32px rgba(46, 125, 92, 0.25);
 }
 
-.avatar-inner {
+.avatar-photo {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: var(--bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: var(--font-serif);
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--primary);
-    letter-spacing: -1px;
+    object-fit: cover;
+    object-position: center top;
 }
 
 .avatar-badge {
