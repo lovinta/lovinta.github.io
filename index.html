@@ -554,9 +554,9 @@
 
         .contact-links {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 1rem;
-            max-width: 700px;
+            max-width: 900px;
         }
 
         .contact-link {
@@ -739,7 +739,6 @@
                 <li><a href="#what-i-do">What I Do</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#credentials">Credentials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -754,22 +753,14 @@
                     <p class="hero-title">PhD Candidate, FSU School of Information · Fulbright Scholar</p>
                     <p class="hero-tagline">I study how people make decisions about health technology. And I build tools that put behavioral science into practice.</p>
                     
-                    <a href="https://g.dev/lovintaha" target="_blank" rel="noopener" class="hero-credential" aria-label="Google Developer profile">
-                        <i class="bx bxl-google"></i>
-                        Google Developer — Gemini Enterprise Agent Ready
-                    </a>
-                    
                     <div class="hero-actions">
-                        <a href="#" class="btn btn-primary" aria-label="Download CV PDF">
-                            <i class="bx bx-download"></i>
-                            Download CV
+                        <a href="https://scholar.google.com/citations?user=hoRXNb0AAAAJ&hl=en" target="_blank" rel="noopener" class="btn btn-primary" aria-label="View Google Scholar profile">
+                            <i class="bx bxs-graduation-cap"></i>
+                            Google Scholar
                         </a>
-                        <a href="https://g.dev/lovintaha" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="View Google Developer profile">
-                            Google Developer
-                        </a>
-                        <a href="https://github.com/lovinta" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="View GitHub profile">
-                            <i class="bx bxl-github"></i>
-                            GitHub
+                        <a href="https://www.linkedin.com/in/lovinta/" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="View LinkedIn profile">
+                            <i class="bx bxl-linkedin-square"></i>
+                            LinkedIn
                         </a>
                     </div>
                 </div>
@@ -800,8 +791,7 @@
                             <i class="bx bx-code-alt"></i>
                         </div>
                         <h3>Building</h3>
-                        <p>I design and build AI systems informed by behavioral science. Built Caesar, an AI agent that applies behavioral frameworks (Fogg, SDT, TMT, COR) as architectural constraints, not just metaphors. Deployed on Google Cloud. Active in the Google Developer ecosystem — Gemini Enterprise Agent Ready, Google Cloud + NVIDIA.</p>
-                        <a href="https://g.dev/lovintaha" target="_blank" rel="noopener" style="display:inline-block; margin-top: 1rem; font-weight: 500;">g.dev/lovintaha</a>
+                        <p>I design and build AI systems informed by behavioral science. Built Caesar, an AI agent that applies behavioral frameworks (Fogg, SDT, TMT, COR) as architectural constraints, not just metaphors. Deployed on Google Cloud.</p>
                     </article>
                     
                     <article class="card">
@@ -931,76 +921,6 @@
             </div>
         </section>
 
-        <!-- Credentials Section -->
-        <section class="credentials" id="credentials" aria-labelledby="credentials-heading">
-            <div class="section-inner">
-                <div class="section-label">Credentials</div>
-                <h2 class="section-heading" id="credentials-heading">Affiliations & Recognition</h2>
-                
-                <div class="cred-grid">
-                    <div class="cred-item">
-                        <div class="cred-icon">
-                            <i class="bx bx-medal"></i>
-                        </div>
-                        <div class="cred-text">
-                            <strong>Fulbright Scholar</strong>
-                            <span>2022 — AMINEF</span>
-                        </div>
-                    </div>
-                    
-                    <div class="cred-item">
-                        <div class="cred-icon">
-                            <i class="bx bx-buildings"></i>
-                        </div>
-                        <div class="cred-text">
-                            <strong>FSU School of Information</strong>
-                            <span>PhD Candidate (current)</span>
-                        </div>
-                    </div>
-                    
-                    <div class="cred-item">
-                        <div class="cred-icon">
-                            <i class="bx bxl-google"></i>
-                        </div>
-                        <div class="cred-text">
-                            <strong>Google Developer</strong>
-                            <span><a href="https://g.dev/lovintaha" target="_blank" rel="noopener">Gemini Enterprise Agent Ready</a></span>
-                        </div>
-                    </div>
-                    
-                    <div class="cred-item">
-                        <div class="cred-icon">
-                            <i class="bx bx-cloud"></i>
-                        </div>
-                        <div class="cred-text">
-                            <strong>Google Cloud + NVIDIA</strong>
-                            <span>Program participant</span>
-                        </div>
-                    </div>
-                    
-                    <div class="cred-item">
-                        <div class="cred-icon">
-                            <i class="bx bx-id-card"></i>
-                        </div>
-                        <div class="cred-text">
-                            <strong>Institut Teknologi Kalimantan</strong>
-                            <span>Assistant Professor (on leave) — East Kalimantan, Indonesia</span>
-                        </div>
-                    </div>
-                    
-                    <div class="cred-item">
-                        <div class="cred-icon">
-                            <i class="bx bx-check-circle"></i>
-                        </div>
-                        <div class="cred-text">
-                            <strong>ASIIN International Accreditation</strong>
-                            <span>Led institutional accreditation — 8 programs</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Contact Section -->
         <section class="contact" id="contact" aria-labelledby="contact-heading">
             <div class="section-inner">
@@ -1010,19 +930,34 @@
                 <p class="contact-intro">I am open to collaborations in health informatics, behavioral AI design, and Indonesia-focused digital health research. If our work overlaps, reach out.</p>
                 
                 <div class="contact-links">
-                    <a href="mailto:lovinta@fsu.edu" class="contact-link" aria-label="Email Lovinta">
-                        <i class="bx bx-envelope"></i>
-                        <span>lovinta@fsu.edu</span>
+                    <a href="https://www.linkedin.com/in/lovinta/" target="_blank" rel="noopener" class="contact-link" aria-label="View LinkedIn profile">
+                        <i class="bx bxl-linkedin-square"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://scholar.google.com/citations?user=hoRXNb0AAAAJ&hl=en" target="_blank" rel="noopener" class="contact-link" aria-label="View Google Scholar profile">
+                        <i class="bx bxs-graduation-cap"></i>
+                        <span>Google Scholar</span>
+                    </a>
+                    
+                    <a href="https://directory.cci.fsu.edu/lovinta-atrinawati/" target="_blank" rel="noopener" class="contact-link" aria-label="View FSU directory profile">
+                        <i class="bx bx-buildings"></i>
+                        <span>FSU Directory</span>
+                    </a>
+                    
+                    <a href="https://is.itk.ac.id/profile/dosen/detail/lovinta-happy-atrinawati-st-mt-cisa" target="_blank" rel="noopener" class="contact-link" aria-label="View ITK profile">
+                        <i class="bx bx-id-card"></i>
+                        <span>ITK Profile</span>
+                    </a>
+                    
+                    <a href="https://orcid.org/0000-0002-5182-3459" target="_blank" rel="noopener" class="contact-link" aria-label="View ORCID profile">
+                        <i class="bx bx-barcode"></i>
+                        <span>ORCID</span>
                     </a>
                     
                     <a href="https://github.com/lovinta" target="_blank" rel="noopener" class="contact-link" aria-label="View GitHub profile">
                         <i class="bx bxl-github"></i>
                         <span>GitHub</span>
-                    </a>
-                    
-                    <a href="https://linkedin.com/in/lovinta" target="_blank" rel="noopener" class="contact-link" aria-label="View LinkedIn profile">
-                        <i class="bx bxl-linkedin-square"></i>
-                        <span>LinkedIn</span>
                     </a>
                     
                     <a href="https://g.dev/lovintaha" target="_blank" rel="noopener" class="contact-link" aria-label="View Google Developer profile">
