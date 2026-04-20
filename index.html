@@ -4,370 +4,1087 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lovinta Atrinawati — Telehealth Researcher</title>
-    <meta name="description"
-        content="Lovinta Atrinawati is a doctoral candidate at Florida State University researching telehealth adoption in Indonesia using the Health Belief Model.">
-    <link rel="stylesheet" href="styles.css">
+    <title>Lovinta H. Atrinawati — PhD Candidate, FSU School of Information</title>
+    <meta name="description" content="Lovinta H. Atrinawati is a Fulbright PhD candidate at FSU School of Information researching health technology adoption and building behavioral AI systems.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Lovinta H. Atrinawati — PhD Candidate, FSU">
+    <meta property="og:description" content="I study how people make decisions about health technology. And I build tools that put behavioral science into practice.">
+    <meta property="og:image" content="profile.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lovinta.github.io">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lovinta H. Atrinawati">
+    <meta name="twitter:description" content="PhD Candidate at FSU School of Information · Fulbright Scholar · Health Informatics Researcher">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1B2A4A;
+            --text: #4A5568;
+            --bg: #F7F6F2;
+            --surface: #FFFFFF;
+            --accent: #2A7F7F;
+            --accent-hover: #1F5F5F;
+            --status-progress-bg: #FEF3C7;
+            --status-progress-text: #B45309;
+            --status-review-bg: #DBEAFE;
+            --status-review-text: #1D4ED8;
+            --status-live-bg: #D1FAE5;
+            --status-live-text: #065F46;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--surface);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            z-index: 1000;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        .nav-logo:hover {
+            color: var(--primary);
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary);
+            margin: 5px 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.9375rem;
+            padding: 0.25rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus {
+            color: var(--primary);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Main content */
+        main {
+            padding-top: 64px;
+        }
+
+        section {
+            padding: 5rem 1.5rem;
+        }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+        }
+
+        .section-label::before {
+            content: '';
+            width: 2rem;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .section-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: calc(100vh - 64px);
+            display: flex;
+            align-items: center;
+            padding: 3rem 1.5rem;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 540px;
+        }
+
+        .hero-name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-title {
+            font-size: 1.125rem;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .hero-credential {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--surface);
+            border: 1px solid #e2e8f0;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-credential i {
+            color: var(--accent);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .btn:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            color: white;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-ghost:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-photo {
+            width: 320px;
+            height: 320px;
+            border-radius: 1rem;
+            object-fit: cover;
+            box-shadow: 0 20px 40px rgba(27, 42, 74, 0.15);
+        }
+
+        /* What I Do Section */
+        .what-i-do {
+            background: var(--surface);
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .card {
+            background: var(--bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card-icon {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: white;
+            border-radius: 0.75rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            font-size: 0.9375rem;
+            color: var(--text);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .project-card {
+            background: var(--surface);
+            border-radius: 1rem;
+            padding: 1.5rem 2rem;
+            border: 1px solid #e2e8f0;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1rem;
+            align-items: start;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 4px 12px rgba(42, 127, 127, 0.1);
+        }
+
+        .project-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-content p {
+            font-size: 0.9375rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .project-link {
+            color: var(--accent);
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .project-link:hover {
+            color: var(--accent-hover);
+        }
+
+        .status-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.8125rem;
+            font-weight: 500;
+        }
+
+        .status-live {
+            background: var(--status-live-bg);
+            color: var(--status-live-text);
+        }
+
+        .status-review {
+            background: var(--status-review-bg);
+            color: var(--status-review-text);
+        }
+
+        .status-progress {
+            background: var(--status-progress-bg);
+            color: var(--status-progress-text);
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 0.125rem 0.5rem;
+            background: #e2e8f0;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            color: var(--text);
+        }
+
+        /* Publications Section */
+        .publications {
+            background: var(--surface);
+        }
+
+        .pub-content {
+            max-width: 720px;
+        }
+
+        .pub-content p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 0.75rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text);
+        }
+
+        .pub-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.9375rem;
+        }
+
+        .pub-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Credentials Section */
+        .credentials {
+            background: var(--bg);
+        }
+
+        .cred-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2.5rem;
+            max-width: 800px;
+        }
+
+        .cred-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--surface);
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .cred-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: white;
+            border-radius: 0.5rem;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .cred-text {
+            font-size: 0.9375rem;
+        }
+
+        .cred-text strong {
+            display: block;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .cred-text span {
+            color: var(--text);
+            font-size: 0.8125rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--surface);
+        }
+
+        .contact-intro {
+            max-width: 600px;
+            font-size: 1.0625rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            max-width: 700px;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg);
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            color: var(--text);
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .contact-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .contact-link i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .contact-link span {
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 1.5rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            font-weight: 600;
+        }
+
+        .footer-copy {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: var(--surface);
+                padding: 1rem 1.5rem;
+                gap: 0;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                display: none;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid #e2e8f0;
+            }
+
+            .nav-links li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 1rem 0;
+            }
+
+            /* Hero mobile */
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: none;
+            }
+
+            .hero-name {
+                font-size: 2.25rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.125rem;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-credential {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-photo {
+                width: 260px;
+                height: 260px;
+            }
+
+            /* Cards */
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Projects */
+            .project-card {
+                grid-template-columns: 1fr;
+            }
+
+            /* Credentials */
+            .cred-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Contact */
+            .contact-links {
+                grid-template-columns: 1fr;
+            }
+
+            /* Footer */
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
     <!-- Navigation -->
-    <nav class="topnav" id="topnav">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-inner">
-            <a href="#hero" class="nav-logo">
-                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M14 2C14 2 6 8 6 16C6 20.418 9.582 24 14 24C18.418 24 22 20.418 22 16C22 8 14 2 14 2Z" fill="#2E7D5C"/>
-                    <path d="M14 8C14 8 10 12 10 16C10 18.209 11.791 20 14 20" stroke="#E07B4C" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>LA</span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
+            <a href="#hero" class="nav-logo">Lovinta H. Atrinawati</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <ul class="nav-links" id="navLinks" role="list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#what-i-do">What I Do</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#credentials">Credentials</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-pattern" aria-hidden="true"></div>
-        <div class="hero-content">
-            <div class="hero-tag">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-                    <circle cx="7" cy="7" r="6" stroke="#2E7D5C" stroke-width="1.5"/>
-                    <path d="M7 3.5V7L9.5 9.5" stroke="#E07B4C" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-                Doctoral Candidate · FSU School of Information
-            </div>
-            <h1 class="hero-name">Lovinta<br>Atrinawati</h1>
-            <p class="hero-subtitle">Understanding how digital health can reach the people who need it most</p>
-            <p class="hero-desc">
-                I study the intersection of human behavior and telehealth — specifically, what makes Indonesian communities accept or reject digital healthcare. My dissertation applies the Health Belief Model to identify barriers and levers for equitable access.
-            </p>
-            <div class="hero-actions">
-                <a href="#research" class="btn btn-primary">Read My Research</a>
-                <a href="#contact" class="btn btn-ghost">Get In Touch</a>
-            </div>
-        </div>
-        <div class="hero-avatar" aria-hidden="true">
-            <div class="avatar-ring">
-                <img src="profile.jpg" alt="Lovinta Atrinawati" class="avatar-photo" />
-            </div>
-            <div class="avatar-badge">
-                <span class="badge-dot"></span>
-                Fulbright Scholar
-            </div>
-        </div>
-        <!-- Decorative leaf SVGs -->
-        <svg class="deco-leaf deco-leaf-1" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M40 5C40 5 10 30 10 70C10 100 25 115 40 115C55 115 70 100 70 70C70 30 40 5 40 5Z" fill="#2E7D5C" opacity="0.12"/>
-            <path d="M40 20V110" stroke="#2E7D5C" stroke-width="1.5" opacity="0.3"/>
-            <path d="M40 40C30 35 20 45 20 45" stroke="#2E7D5C" stroke-width="1" opacity="0.3"/>
-            <path d="M40 55C50 50 60 60 60 60" stroke="#2E7D5C" stroke-width="1" opacity="0.3"/>
-            <path d="M40 70C30 65 22 73 22 73" stroke="#2E7D5C" stroke-width="1" opacity="0.3"/>
-        </svg>
-        <svg class="deco-leaf deco-leaf-2" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M40 5C40 5 10 30 10 70C10 100 25 115 40 115C55 115 70 100 70 70C70 30 40 5 40 5Z" fill="#E07B4C" opacity="0.1"/>
-        </svg>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about-section" id="about">
-        <div class="section-container">
-            <div class="section-label">
-                <span class="label-line"></span>
-                <span>About Me</span>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 class="section-heading">Bridging behavior,<br>health, and technology</h2>
-                    <p class="about-body">
-                        I am a doctoral candidate at Florida State University's School of Information. Before the PhD, I was a faculty member in information systems at Institut Teknologi Kalimantan (ITK) — my home institution in East Kalimantan, Indonesia.
-                    </p>
-                    <p class="about-body">
-                        My research sits at the crossroads of health informatics and behavioral science. I am particularly interested in how socioeconomic and cultural factors shape health technology adoption in archipelagic nations — spaces where geography makes physical healthcare inaccessible for millions.
-                    </p>
-                    <div class="about-tags">
-                        <span class="tag">Health Belief Model</span>
-                        <span class="tag">Telehealth Adoption</span>
-                        <span class="tag">Health Informatics</span>
-                        <span class="tag">Behavioral Science</span>
-                        <span class="tag">Indonesia</span>
-                        <span class="tag">Fulbright Scholar</span>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero" aria-labelledby="hero-name">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h1 class="hero-name" id="hero-name">Lovinta H. Atrinawati</h1>
+                    <p class="hero-title">PhD Candidate, FSU School of Information · Fulbright Scholar</p>
+                    <p class="hero-tagline">I study how people make decisions about health technology. And I build tools that put behavioral science into practice.</p>
+                    
+                    <a href="https://g.dev/lovintaha" target="_blank" rel="noopener" class="hero-credential" aria-label="Google Developer profile">
+                        <i class="bx bxl-google"></i>
+                        Google Developer — Gemini Enterprise Agent Ready
+                    </a>
+                    
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary" aria-label="Download CV PDF">
+                            <i class="bx bx-download"></i>
+                            Download CV
+                        </a>
+                        <a href="https://g.dev/lovintaha" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="View Google Developer profile">
+                            Google Developer
+                        </a>
+                        <a href="https://github.com/lovinta" target="_blank" rel="noopener" class="btn btn-ghost" aria-label="View GitHub profile">
+                            <i class="bx bxl-github"></i>
+                            GitHub
+                        </a>
                     </div>
                 </div>
-                <div class="about-facts">
-                    <div class="fact-card">
-                        <div class="fact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2E7D5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                            </svg>
+                
+                <div class="hero-image">
+                    <img src="profile.jpg" alt="Lovinta H. Atrinawati" class="hero-photo" width="320" height="320" loading="eager">
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Do Section -->
+        <section class="what-i-do" id="what-i-do" aria-labelledby="what-i-do-heading">
+            <div class="section-inner">
+                <div class="section-label">What I Do</div>
+                <h2 class="section-heading" id="what-i-do-heading">Research, Build, Teach</h2>
+                
+                <div class="cards-grid">
+                    <article class="card">
+                        <div class="card-icon">
+                            <i class="bx bx-search-alt"></i>
                         </div>
-                        <div class="fact-content">
-                            <span class="fact-number">FSU</span>
-                            <span class="fact-label">School of Information</span>
+                        <h3>Research</h3>
+                        <p>Studying health technology adoption and the behavioral factors that shape it. Current focus: telehealth in Indonesia, specifically how socioeconomic context, perceived risk, and trust interact with technology uptake decisions. Dissertation in progress (N=480, three cities). One paper under review at Information Research.</p>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-icon">
+                            <i class="bx bx-code-alt"></i>
+                        </div>
+                        <h3>Building</h3>
+                        <p>I design and build AI systems informed by behavioral science. Built Caesar, an AI agent that applies behavioral frameworks (Fogg, SDT, TMT, COR) as architectural constraints, not just metaphors. Deployed on Google Cloud. Active in the Google Developer ecosystem — Gemini Enterprise Agent Ready, Google Cloud + NVIDIA.</p>
+                        <a href="https://g.dev/lovintaha" target="_blank" rel="noopener" style="display:inline-block; margin-top: 1rem; font-weight: 500;">g.dev/lovintaha</a>
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card-icon">
+                            <i class="bx bx-chalkboard"></i>
+                        </div>
+                        <h3>Teaching & Mentoring</h3>
+                        <p>Ten years in higher education at Institut Teknologi Kalimantan, East Kalimantan. Led the institution's first international accreditation (ASIIN, 8 programs). Secured curriculum development grants. Currently mentoring junior lecturers and doctoral students informally.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="projects" aria-labelledby="projects-heading">
+            <div class="section-inner">
+                <div class="section-label">Projects</div>
+                <h2 class="section-heading" id="projects-heading">Active Work</h2>
+                
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="status-tag status-live">Live prototype</span>
+                            <h3>Caesar</h3>
+                            <p>An AI agent that uses behavioral science frameworks — Fogg's Behavior Model, Self-Determination Theory, Terror Management Theory, and Conservation of Resources Theory — as architectural logic, not just design decoration. Built using OpenClaw on a Google Cloud VM.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Google Cloud</span>
+                                <span class="tech-tag">OpenClaw</span>
+                                <span class="tech-tag">Behavioral AI</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="status-tag status-review">Under Review</span>
+                            <h3>Voices from Reddit — Generative AI and Health</h3>
+                            <p>Mixed-methods analysis of 6,707 Reddit posts examining how people discuss generative AI in health contexts. Combines computational text analysis with qualitative coding to identify patterns in public perception, concern, and use.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Reddit API</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">Mixed Methods</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="status-tag status-progress">Data collection in progress</span>
+                            <h3>Dissertation — Telehealth Indonesia</h3>
+                            <p>Cross-sectional survey study (N=480, three Indonesian cities) applying the Health Belief Model to understand what drives and blocks telehealth adoption. Tests nine hypotheses relating perceived severity, benefits, barriers, self-efficacy, and cues to action.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">HBM</span>
+                                <span class="tech-tag">Survey Research</span>
+                                <span class="tech-tag">SEM</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="status-tag status-progress">In progress</span>
+                            <h3>Reddit Telehealth Perceptions (HBM)</h3>
+                            <p>Directed qualitative content analysis of Reddit discussions about telehealth, using the Health Belief Model as the coding framework. Examines how lay health beliefs expressed in online communities map onto established behavioral constructs.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Qualitative Content Analysis</span>
+                                <span class="tech-tag">HBM</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card">
+                        <div class="project-content">
+                            <span class="status-tag status-live">Live / In development</span>
+                            <h3>Agentic AI Pipeline — Reddit Health</h3>
+                            <p>A Python-based agentic pipeline that automates the collection and initial analysis of health-related Reddit data. Connects Reddit API output to LLM-based processing for theme identification and behavioral pattern detection.</p>
+                            <div class="project-tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">LLM</span>
+                                <span class="tech-tag">Reddit API</span>
+                                <span class="tech-tag">Health NLP</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="publications" id="publications" aria-labelledby="publications-heading">
+            <div class="section-inner">
+                <div class="section-label">Research & Publications</div>
+                <h2 class="section-heading" id="publications-heading">Publications</h2>
+                
+                <div class="pub-content">
+                    <p>My earlier work, conducted while on faculty in Indonesia, focused on IT governance and enterprise architecture. Those publications can be found on Google Scholar — 512 citations, h-index 12.</p>
+                    
+                    <div class="pub-stats">
+                        <div class="stat">
+                            <span class="stat-number">19</span>
+                            <span class="stat-label">Publications</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">512</span>
+                            <span class="stat-label">Citations</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">h-index</span>
                         </div>
                     </div>
-                    <div class="fact-card">
-                        <div class="fact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2E7D5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                            </svg>
+                    
+                    <p>My current work in health informatics:</p>
+                    <ul class="pub-list">
+                        <li><em>Voices from Reddit: Users' Experiences and Opinions with Generative AI for Health Problems</em> — Under review, Information Research journal</li>
+                        <li><em>Socio-behavioral Factors Influencing Telehealth Adoption in Indonesia</em> — Dissertation, data collection in progress</li>
+                        <li><em>Reddit: Telehealth Perceptions (HBM)</em> — In progress</li>
+                    </ul>
+                    
+                    <a href="https://scholar.google.com/citations?user=hoRXNb0AAAAJ" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i class="bx bx-book-open"></i>
+                        View Google Scholar Profile
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials Section -->
+        <section class="credentials" id="credentials" aria-labelledby="credentials-heading">
+            <div class="section-inner">
+                <div class="section-label">Credentials</div>
+                <h2 class="section-heading" id="credentials-heading">Affiliations & Recognition</h2>
+                
+                <div class="cred-grid">
+                    <div class="cred-item">
+                        <div class="cred-icon">
+                            <i class="bx bx-medal"></i>
                         </div>
-                        <div class="fact-content">
-                            <span class="fact-number">Indonesia</span>
-                            <span class="fact-label">Country of Focus</span>
+                        <div class="cred-text">
+                            <strong>Fulbright Scholar</strong>
+                            <span>2022 — AMINEF</span>
                         </div>
                     </div>
-                    <div class="fact-card">
-                        <div class="fact-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2E7D5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                            </svg>
+                    
+                    <div class="cred-item">
+                        <div class="cred-icon">
+                            <i class="bx bx-buildings"></i>
                         </div>
-                        <div class="fact-content">
-                            <span class="fact-number">Fulbright</span>
-                            <span class="fact-label">AMINEF Scholar</span>
+                        <div class="cred-text">
+                            <strong>FSU School of Information</strong>
+                            <span>PhD Candidate (current)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cred-item">
+                        <div class="cred-icon">
+                            <i class="bx bxl-google"></i>
+                        </div>
+                        <div class="cred-text">
+                            <strong>Google Developer</strong>
+                            <span><a href="https://g.dev/lovintaha" target="_blank" rel="noopener">Gemini Enterprise Agent Ready</a></span>
+                        </div>
+                    </div>
+                    
+                    <div class="cred-item">
+                        <div class="cred-icon">
+                            <i class="bx bx-cloud"></i>
+                        </div>
+                        <div class="cred-text">
+                            <strong>Google Cloud + NVIDIA</strong>
+                            <span>Program participant</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cred-item">
+                        <div class="cred-icon">
+                            <i class="bx bx-id-card"></i>
+                        </div>
+                        <div class="cred-text">
+                            <strong>Institut Teknologi Kalimantan</strong>
+                            <span>Assistant Professor (on leave) — East Kalimantan, Indonesia</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cred-item">
+                        <div class="cred-icon">
+                            <i class="bx bx-check-circle"></i>
+                        </div>
+                        <div class="cred-text">
+                            <strong>ASIIN International Accreditation</strong>
+                            <span>Led institutional accreditation — 8 programs</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Research Section -->
-    <section class="section research-section" id="research">
-        <div class="section-container">
-            <div class="section-label">
-                <span class="label-line"></span>
-                <span>Research Focus</span>
-            </div>
-            <h2 class="section-heading">Dissertation &amp; Publications</h2>
-            <p class="section-intro">
-                My work examines the socio-behavioral determinants of telehealth uptake in Indonesia — a country of 17,000+ islands where digital health could be transformative, if barriers are properly understood.
-            </p>
-
-            <div class="research-cards">
-                <div class="research-card research-main">
-                    <div class="research-card-header">
-                        <span class="research-badge">Dissertation</span>
-                        <span class="research-year">2025–2026</span>
-                    </div>
-                    <h3>Socio-Behavioral Factors in Telehealth Adoption in Indonesia</h3>
-                    <p>Applying the Health Belief Model (HBM) to identify how perceived severity, benefits, barriers, cues to action, and self-efficacy shape telehealth adoption among Indonesian adults. Hypotheses H1–H9 tested through survey methodology.</p>
-                    <div class="hypothesis-list">
-                        <span class="h-tag">H1–H9</span>
-                        <span class="h-tag">HBM Framework</span>
-                        <span class="h-tag">Survey Research</span>
-                        <span class="h-tag">Indonesia</span>
-                    </div>
-                </div>
-
-                <div class="research-card">
-                    <div class="research-card-header">
-                        <span class="research-badge">Systematic Review</span>
-                    </div>
-                    <h3>Information Seeking in Digital Health</h3>
-                    <p>Systematic review of how patients and caregivers seek health information online, with emphasis on behavior change frameworks and digital health literacy interventions.</p>
-                    <div class="hypothesis-list">
-                        <span class="h-tag">ISL Framework</span>
-                        <span class="h-tag">Systematic Review</span>
-                    </div>
-                </div>
-
-                <div class="research-card">
-                    <div class="research-card-header">
-                        <span class="research-badge">Design Research</span>
-                    </div>
-                    <h3>RCT of Health Informatics Interventions</h3>
-                    <p>LabGenie project — randomized controlled trial testing a behavioral design intervention to improve health information seeking and decision-making among Indonesian digital health users.</p>
-                    <div class="hypothesis-list">
-                        <span class="h-tag">RCT</span>
-                        <span class="h-tag">Behavioral Design</span>
-                        <span class="h-tag">LabGenie</span>
-                    </div>
+        <!-- Contact Section -->
+        <section class="contact" id="contact" aria-labelledby="contact-heading">
+            <div class="section-inner">
+                <div class="section-label">Contact</div>
+                <h2 class="section-heading" id="contact-heading">Get In Touch</h2>
+                
+                <p class="contact-intro">I am open to collaborations in health informatics, behavioral AI design, and Indonesia-focused digital health research. If our work overlaps, reach out.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:lovinta@fsu.edu" class="contact-link" aria-label="Email Lovinta">
+                        <i class="bx bx-envelope"></i>
+                        <span>lovinta@fsu.edu</span>
+                    </a>
+                    
+                    <a href="https://github.com/lovinta" target="_blank" rel="noopener" class="contact-link" aria-label="View GitHub profile">
+                        <i class="bx bxl-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/lovinta" target="_blank" rel="noopener" class="contact-link" aria-label="View LinkedIn profile">
+                        <i class="bx bxl-linkedin-square"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://g.dev/lovintaha" target="_blank" rel="noopener" class="contact-link" aria-label="View Google Developer profile">
+                        <i class="bx bxl-google"></i>
+                        <span>g.dev/lovintaha</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section projects-section" id="projects">
-        <div class="section-container">
-            <div class="section-label">
-                <span class="label-line"></span>
-                <span>Projects</span>
-            </div>
-            <h2 class="section-heading">Active Work</h2>
-
-            <div class="projects-grid">
-                <a href="https://github.com/lovinta/karate-dojo" target="_blank" rel="noopener" class="project-card">
-                    <div class="project-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#2E7D5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                        </svg>
-                    </div>
-                    <div class="project-info">
-                        <h3>Harimau Kecil Karate Dojo</h3>
-                        <p>Bahasa Indonesia children's karate website with embedded mini-games. Mobile-first, accessible, fully localized.</p>
-                        <span class="project-stack">HTML · CSS · JS · Bahasa Indonesia</span>
-                    </div>
-                    <i class='bx bx-arrow-right project-arrow'></i>
-                </a>
-
-                <a href="https://github.com/lovinta/kronos" target="_blank" rel="noopener" class="project-card">
-                    <div class="project-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#2E7D5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                        </svg>
-                    </div>
-                    <div class="project-info">
-                        <h3>Kronos Trading Bot</h3>
-                        <p>Event-driven Binance Futures trading bot with walkforward optimization, Grafana dashboards, and Telegram alerts.</p>
-                        <span class="project-stack">Python · XGBoost · Binance Futures · Docker</span>
-                    </div>
-                    <i class='bx bx-arrow-right project-arrow'></i>
-                </a>
-
-                <a href="https://github.com/lovinta/agentic-ai-reddit" target="_blank" rel="noopener" class="project-card">
-                    <div class="project-icon">
-                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#2E7D5C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <circle cx="11" cy="11" r="8"/>
-                            <path d="M21 21l-4.35-4.35"/>
-                        </svg>
-                    </div>
-                    <div class="project-info">
-                        <h3>Agentic AI — Reddit Health</h3>
-                        <p>Agentic AI pipeline analyzing Reddit health communities. Identifying telehealth adoption patterns and mental health trends in Indonesian online spaces.</p>
-                        <span class="project-stack">Python · LLM · Reddit API · Health NLP</span>
-                    </div>
-                    <i class='bx bx-arrow-right project-arrow'></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact-section" id="contact">
-        <div class="section-container">
-            <div class="section-label">
-                <span class="label-line"></span>
-                <span>Connect</span>
-            </div>
-            <h2 class="section-heading">Let's Talk</h2>
-            <p class="section-intro">
-                Open to collaborations in health informatics, telehealth, behavioral design, or Indonesia-focused digital health research. Feel free to reach out.
-            </p>
-
-            <div class="contact-grid">
-                <a href="https://directory.cci.fsu.edu/lovinta-atrinawati/" target="_blank" rel="noopener" class="contact-card">
-                    <i class='bx bxs-institution'></i>
-                    <div>
-                        <h3>FSU Directory</h3>
-                        <span>Official faculty profile</span>
-                    </div>
-                </a>
-                <a href="https://scholar.google.com/citations?user=hoRXNb0AAAAJ&hl=en" target="_blank" rel="noopener" class="contact-card">
-                    <i class='bx bxs-graduation'></i>
-                    <div>
-                        <h3>Google Scholar</h3>
-                        <span>Publications & citations</span>
-                    </div>
-                </a>
-                <a href="https://linkedin.com/in/lovinta" target="_blank" rel="noopener" class="contact-card">
-                    <i class='bx bxl-linkedin-square'></i>
-                    <div>
-                        <h3>LinkedIn</h3>
-                        <span>Professional network</span>
-                    </div>
-                </a>
-                <a href="https://orcid.org/0000-0002-5182-3459" target="_blank" rel="noopener" class="contact-card">
-                    <i class='bx bx-id-card'></i>
-                    <div>
-                        <h3>ORCID</h3>
-                        <span>0000-0002-5182-3459</span>
-                    </div>
-                </a>
-                <a href="https://is.itk.ac.id/profile/dosen/detail/lovinta-happy-atrinawati-st-mt-cisa" target="_blank" rel="noopener" class="contact-card">
-                    <i class='bx bxs-school'></i>
-                    <div>
-                        <h3>ITK Faculty Profile</h3>
-                        <span>Institut Teknologi Kalimantan</span>
-                    </div>
-                </a>
-                <a href="https://stu.aminef.or.id/alumny/detail/4750/Lovinta-Happy-Atrinawati" target="_blank" rel="noopener" class="contact-card">
-                    <i class='bx bx-globe'></i>
-                    <div>
-                        <h3>AMINEF Alumni</h3>
-                        <span>Fulbright Indonesia</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer>
         <div class="footer-inner">
-            <div class="footer-logo">
-                <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                    <path d="M14 2C14 2 6 8 6 16C6 20.418 9.582 24 14 24C18.418 24 22 20.418 22 16C22 8 14 2 14 2Z" fill="#2E7D5C"/>
-                    <path d="M14 8C14 8 10 12 10 16C10 18.209 11.791 20 14 20" stroke="#E07B4C" stroke-width="2" stroke-linecap="round"/>
-                </svg>
-                <span>Lovinta Atrinawati</span>
-            </div>
-            <p class="footer-copy">&copy; 2026 Lovinta Atrinawati. Built with care in Tallahassee, FL.</p>
+            <div class="footer-logo">Lovinta H. Atrinawati</div>
+            <p class="footer-copy">© 2026 Lovinta H. Atrinawati. Built with care in Tallahassee, FL.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        // Mobile navigation toggle
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close mobile nav on link click
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
-        // Nav toggle (mobile)
-        document.getElementById('navToggle').addEventListener('click', () => {
-            document.getElementById('navLinks').classList.toggle('open');
-            document.getElementById('navToggle').classList.toggle('active');
+        // Close mobile nav on outside click
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
         });
 
-        // Close nav on link click
-        document.querySelectorAll('.nav-links a').forEach(a => {
-            a.addEventListener('click', () => {
-                document.getElementById('navLinks').classList.remove('open');
-                document.getElementById('navToggle').classList.remove('active');
-            });
-        });
-
-        // Scroll-reveal for sections
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('revealed');
-                    observer.unobserve(entry.target);
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    const navHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
                 }
             });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.section').forEach(s => observer.observe(s));
-        document.querySelectorAll('.research-card, .project-card, .contact-card, .fact-card').forEach(c => observer.observe(c));
+        });
     </script>
 </body>
 
